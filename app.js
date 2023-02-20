@@ -16,7 +16,7 @@ const computerSelection = generateComputerInput(); // Declare constant variable 
 function determineWinner() { // Create function to compare both selection parameters, and announce Winner
     if ((playerSelection === 'rock') && (computerSelection === 'scissors')) {
         // player wins
-        console.log('You win!');
+        console.log('You win! Rock beats scissors!');
     } else if ((playerSelection === 'scissors') && (computerSelection === 'rock')) {
         // computer wins
         console.log('You lost!');
