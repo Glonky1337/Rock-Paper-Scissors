@@ -4,7 +4,6 @@ function getPlayerChoice (){ // Create function to get player's input of Rock, P
     return playerSelection; //return the value for playerSelection to Global Scope
 }
 const playerSelection = getPlayerChoice(); // declare constant variable based on the getPlayerChoice() function
-console.log(playerSelection);
 
 function generateComputerInput() { // Create function to generate computer's input
     const options = ['rock', 'paper', 'scissors']; // Create array that contains the options rock, paper, or scissors
@@ -13,7 +12,6 @@ function generateComputerInput() { // Create function to generate computer's inp
     return computerSelection; // return the value for computerSelection to Global Scope
 }
 const computerSelection = generateComputerInput(); // declare constant variable based on the generateComputerInput() function
-console.log(computerSelection);
 
 
 // Create function to generate computer's input
