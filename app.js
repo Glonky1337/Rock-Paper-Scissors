@@ -1,7 +1,9 @@
-// Create function to get player's input of Rock, Paper, or Scissor
-// Prompt player to input either Rock, Paper or Scissor
-// Make player's selection case-insensitive
-// Return value for variable
+function getPlayerChoice (){ // Create function to get player's input of Rock, Paper, or Scissor
+    let playerSelection = prompt('Rock, Paper, or Scissors?'); // Prompt player to input either Rock, Paper, or Scissor
+    playerSelection = playerSelection.toLowerCase(); // Make player's selection case-insensitive
+    return playerSelection; //return the value for playerSelection to Global Scope
+}
+const playerSelection = getPlayerChoice(); // declare constant variable based on the getPlayerChoice() function.
 
 // Create function to generate computer's input
 // Return value for variable
