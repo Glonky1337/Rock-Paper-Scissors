@@ -13,32 +13,41 @@ function generateComputerInput() { // Create function to generate computer's inp
 }
 const computerSelection = generateComputerInput(); // Declare constant variable based on the generateComputerInput() function
 
+
+
+
 function determineWinner() { // Create function to compare both selection parameters, and announce Winner
-    if ((playerSelection === 'rock') && (computerSelection === 'scissors')) {
-        // player wins
+    if ((playerSelection === 'rock') && (computerSelection === 'scissors')) { // player wins
         console.log('You win! Rock beats scissors!');
-    } else if ((playerSelection === 'scissors') && (computerSelection === 'rock')) {
-        // computer wins
+        let playerScore = 1;
+        return playerScore;
+    } else if ((playerSelection === 'scissors') && (computerSelection === 'rock')) { // computer wins
         console.log('You lost! Rock beats scissors!');
-    } else if ((playerSelection === 'scissors') && (computerSelection === 'paper')) {
-        // user wins
+        let computerScore = 1
+        return computerScore;
+    } else if ((playerSelection === 'scissors') && (computerSelection === 'paper')) { // player wins
         console.log('You win! Scissors beats paper!');
-    } else if ((playerSelection === 'paper') && (computerSelection === 'scissors')) {
-        // computer wins
+        let playerScore = 1;
+        return playerScore;
+    } else if ((playerSelection === 'paper') && (computerSelection === 'scissors')) { // computer wins
         console.log('You lost! Scissors beats paper');
-    } else if ((playerSelection === 'paper') && (computerSelection === 'rock')) {
-        // user wins
+        let computerScore = 1;
+        return computerScore;
+    } else if ((playerSelection === 'paper') && (computerSelection === 'rock')) { // player wins
         console.log('You win! Paper beats rock!');
-    } else if ((playerSelection === 'rock') && (computerSelection === 'paper')) {
-        // computer wins
+        let playerScore = 1;
+        return playerScore;
+    } else if ((playerSelection === 'rock') && (computerSelection === 'paper')) { // computer wins
         console.log('You lost! Paper beats rock!');
-    } else {
-        //tied round
+        let computerScore = 1;
+        return computerScore;
+    } else if (playerSelection === computerSelection) { //tied round
         console.log('It\'s a tie! Try again!');
     }
 }
-
 determineWinner(playerSelection, computerSelection);
+
+
 
 // Create function to compare both selection parameters, and announce winner
 // Increment winner's score by one for each round
