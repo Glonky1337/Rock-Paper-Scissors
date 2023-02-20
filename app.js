@@ -19,22 +19,22 @@ function determineWinner() { // Create function to compare both selection parame
         console.log('You win! Rock beats scissors!');
     } else if ((playerSelection === 'scissors') && (computerSelection === 'rock')) {
         // computer wins
-        console.log('You lost!');
+        console.log('You lost! Rock beats scissors!');
     } else if ((playerSelection === 'scissors') && (computerSelection === 'paper')) {
         // user wins
-        console.log('You win!');
+        console.log('You win! Scissors beats paper!');
     } else if ((playerSelection === 'paper') && (computerSelection === 'scissors')) {
         // computer wins
-        console.log('You lost!');
+        console.log('You lost! Scissors beats paper');
     } else if ((playerSelection === 'paper') && (computerSelection === 'rock')) {
         // user wins
-        console.log('You win!');
+        console.log('You win! Paper beats rock!');
     } else if ((playerSelection === 'rock') && (computerSelection === 'paper')) {
         // computer wins
-        console.log('You lost!');
+        console.log('You lost! Paper beats rock!');
     } else {
         //tied round
-        console.log('It\'s a tie!');
+        console.log('It\'s a tie! Try again!');
     }
 }
 
