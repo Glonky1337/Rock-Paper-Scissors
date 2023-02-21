@@ -51,16 +51,20 @@ function game() {
         const result = determineRoundWinner(playerSelection, computerSelection);
         playerTotalScore += result.playerScore;
         computerTotalScore += result.computerScore;
+        console.log(`Player Score: ${playerTotalScore}`);
+        console.log(`Computer Score: ${computerTotalScore}`);
     }
-    console.log(`Player Score: ${playerTotalScore}`);
-    console.log(`Computer Score: ${computerTotalScore}`);
+    
+    if (playerTotalScore > computerTotalScore) {
+        console.log('Congratulations, you won!');
+    } else if (playerTotalScore < computerTotalScore) {
+        console.log('Game over - you lose.');
+    } else {
+        console.log('Somehow we\'ve tied!');
+    }
 }
 
 game();
-
-
-
-
 
 // Increment winner's score by one for each round
 
