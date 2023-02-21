@@ -3,7 +3,6 @@ function getPlayerChoice (){ // Create function to get player's input of Rock, P
     playerSelection = playerSelection.toLowerCase(); // Make player's selection case-insensitive
     return playerSelection; // Return the value for playerSelection to Global Scope
 }
-const playerSelection = getPlayerChoice(); // Declare constant variable based on the getPlayerChoice() function
 
 function generateComputerInput() { // Create function to generate computer's input
     const options = ['rock', 'paper', 'scissors']; // Create array that contains the options rock, paper, or scissors
@@ -11,9 +10,8 @@ function generateComputerInput() { // Create function to generate computer's inp
     let computerSelection = options[randomIndex]; // Select and assign corresponding value from options array
     return computerSelection; // return the value for computerSelection to Global Scope
 }
-const computerSelection = generateComputerInput(); // Declare constant variable based on the generateComputerInput() function
 
-function determineWinner(playerSelection, computerSelection) { // Create function to compare both selection parameters, and announce Winner
+function determineRoundWinner(playerSelection, computerSelection) { // Create function to compare both selection parameters, and announce Winner
     let playerScore = 0;
     let computerScore = 0;
     
@@ -50,7 +48,7 @@ function game() {
     for (let i = 0; i < 5; i++) {
         const playerSelection = getPlayerChoice();
         const computerSelection = generateComputerInput();
-        const result = determineWinner(playerSelection, computerSelection);
+        const result = determineRoundWinner(playerSelection, computerSelection);
         playerTotalScore += result.playerScore;
         computerTotalScore += result.computerScore;
     }
