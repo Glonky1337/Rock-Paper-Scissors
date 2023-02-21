@@ -13,43 +13,57 @@ function generateComputerInput() { // Create function to generate computer's inp
 }
 const computerSelection = generateComputerInput(); // Declare constant variable based on the generateComputerInput() function
 
-
-
-
-function determineWinner() { // Create function to compare both selection parameters, and announce Winner
-    if ((playerSelection === 'rock') && (computerSelection === 'scissors')) { // player wins
+function determineWinner(playerSelection, computerSelection) { // Create function to compare both selection parameters, and announce Winner
+    let playerScore = 0;
+    let computerScore = 0;
+    
+    if ((playerSelection === 'rock') && (computerSelection === 'scissors')) { // Player wins
         console.log('You win! Rock beats scissors!');
-        let playerScore = 1;
-        return playerScore;
-    } else if ((playerSelection === 'scissors') && (computerSelection === 'rock')) { // computer wins
+        playerScore = 1;
+    } else if ((playerSelection === 'scissors') && (computerSelection === 'rock')) { // Computer wins
         console.log('You lost! Rock beats scissors!');
-        let computerScore = 1
-        return computerScore;
-    } else if ((playerSelection === 'scissors') && (computerSelection === 'paper')) { // player wins
+        computerScore = 1
+    } else if ((playerSelection === 'scissors') && (computerSelection === 'paper')) { // Player wins
         console.log('You win! Scissors beats paper!');
-        let playerScore = 1;
-        return playerScore;
-    } else if ((playerSelection === 'paper') && (computerSelection === 'scissors')) { // computer wins
+        playerScore = 1;
+    } else if ((playerSelection === 'paper') && (computerSelection === 'scissors')) { // Computer wins
         console.log('You lost! Scissors beats paper');
-        let computerScore = 1;
-        return computerScore;
-    } else if ((playerSelection === 'paper') && (computerSelection === 'rock')) { // player wins
+        computerScore = 1;
+    } else if ((playerSelection === 'paper') && (computerSelection === 'rock')) { // Player wins
         console.log('You win! Paper beats rock!');
-        let playerScore = 1;
-        return playerScore;
-    } else if ((playerSelection === 'rock') && (computerSelection === 'paper')) { // computer wins
+        playerScore = 1;
+    } else if ((playerSelection === 'rock') && (computerSelection === 'paper')) { // Computer wins
         console.log('You lost! Paper beats rock!');
-        let computerScore = 1;
-        return computerScore;
-    } else if (playerSelection === computerSelection) { //tied round
+        computerScore = 1;
+    } else if (playerSelection === computerSelection) { // Tied round
         console.log('It\'s a tie! Try again!');
+        playerScore = 1;
+        computerScore = 1;
     }
+    return {playerScore, computerScore};
 }
-determineWinner(playerSelection, computerSelection);
+
+function game() {
+    let playerTotalScore = 0;
+    let computerTotalScore = 0;
+
+    for (let i = 0; i < 5; i++) {
+        const playerSelection = getPlayerChoice();
+        const computerSelection = generateComputerInput();
+        const result = determineWinner(playerSelection, computerSelection);
+        playerTotalScore += result.playerScore;
+        computerTotalScore += result.computerScore;
+    }
+    console.log(`Player Score: ${playerTotalScore}`);
+    console.log(`Computer Score: ${computerTotalScore}`);
+}
+
+game();
 
 
 
-// Create function to compare both selection parameters, and announce winner
+
+
 // Increment winner's score by one for each round
 
 // Create a function that play's five rounds, and announces the winner of the game.
