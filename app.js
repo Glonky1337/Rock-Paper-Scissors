@@ -64,4 +64,4 @@ function game() {  // Play five rounds, and announce the winner of the game
     }
 }
 
-game(); // execute game
+game(); // execute completed game
