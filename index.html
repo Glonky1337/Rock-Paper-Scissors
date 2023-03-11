@@ -9,65 +9,36 @@
     <title>Rock Paper Scissors</title>
 </head>
 <body>
-    <header class="header">
-        <div id="game-title">Rock Paper Scissors</div>
-        <div id="game-description">(Select Your Weapon)</div>
-    </header>
-    <main>
+    <main id="main">
+        <header class="header">
+            <div id="game-title">Rock Paper Scissors</div>
+        </header>
         <section class="gameplay-buttons">
-            <div id="option-one"> 
-                <!-- Rock - Insert .png -->
-            </div id="option-two">
-            <div>
-                <!-- Paper - Insert .png-->
-            </div>
-            <div id="option-three">
-                <!-- Scissors - Insert .png -->
-            </div>
+            <button class="option" id="rock"></button>
+            <button class="option" id="paper"></button>
+            <button class="option" id="scissors"></button>
         </section>
         <section class="scoreboard">
-            <div id="player-scores">
-                <!-- i.e. "2   VS.  3" -->
+            <div id="scores">
+                <div class="score-item" id="player-score">1</div>
+                <p class="score-item" id="versus-separator">vs</p>
+                <div class="score-item" id="computer-score">3</div>
             </div>
-            <div class="player-results">
-                <div id="player-profile-picture">
-                    <!-- Insert .png -->
-                </div>
-                <div id="player-result-one">
-                    <!-- Depict chosen weapon, background color change -->
-                </div>
-                <div id="player-result-two">
-                    <!-- Depict chosen weapon, background color change -->
-                </div>
-                <div id="player-result-three">
-                    <!-- Depict chosen weapon, background color change -->
-                </div>
-                <div id="player-result-four">
-                    <!-- Depict chosen weapon, background color change -->
-                </div>
-                <div id="player-result-five">
-                    <!-- Depict chosen weapon, background color change -->
-                </div>
+            <div class="user-results">
+                <div class="result" id="user-profile-picture"></div>
+                <div class="result box" id="user-result-one"></div>
+                <div class="result box" id="user-result-two"></div>
+                <div class="result box" id="user-result-three"></div>
+                <div class="result box" id="user-result-four"></div>
+                <div class="result box" id="user-result-five"></div>
             </div>
             <div class="computer-results">
-                <div id="computer-profile-picture">
-                    <!-- Insert .png -->
-                </div>
-                <div id="computer-result-one">
-                    <!-- Depict chosen weapon, background color change -->
-                </div>
-                <div id="computer-result-two">
-                    <!-- Depict chosen weapon, background color change -->
-                </div>
-                <div id="computer-result-three">
-                    <!-- Depict chosen weapon, background color change -->
-                </div>
-                <div id="computer-result-four">
-                    <!-- Depict chosen weapon, background color change -->
-                </div>
-                <div id="computer-result-five">
-                    <!-- Depict chosen weapon, background color change -->
-                </div>
+                <div class="result" id="computer-profile-picture"></div>
+                <div class="result box" id="computer-result-one"></div>
+                <div class="result box" id="computer-result-two"></div>
+                <div class="result box" id="computer-result-three"></div>
+                <div class="result box" id="computer-result-four"></div>
+                <div class="result box" id="computer-result-five"></div>
             </div>
         </section>
     </main>
