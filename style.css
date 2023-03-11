@@ -1,4 +1,148 @@
 * {
-    background-color: #111827;
-    color: #c1bcbc;
+    margin: 0px;
+}
+
+
+#main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-image: url(/images/color-gradient-background.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#game-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* 3d Text */
+    color: white; 
+    font: bold 52px Helvetica, Arial, Sans-Serif;
+    text-shadow: 1px 1px #888888, 
+                2px 2px #888888, 
+                3px 3px #888888;
+}
+
+.option {
+    height: 200px;
+    width: 200px;
+    margin: 15px;
+    border-color: rgb(236, 236, 236);
+    border-radius: 5px;
+    background: rgb(236, 236, 236);
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+#rock {
+    background-image: url(/images/rock.png); /* Designed by vectorstock (Image #25169739 at VectorStock.com)*/
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#paper {
+    background-image: url(/images/paper.png); /* Designed by vectorstock (Image #25169739 at VectorStock.com)*/
+    background-size: 55%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#scissors {
+    background-image: url(/images/scissors.png); /* Designed by vectorstock (Image #25169739 at VectorStock.com)*/
+    background-size: 45%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.scoreboard {
+    display: flex;
+    flex-direction: column;
+}
+
+#scores {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+    /* 3d Text */
+    color: white; 
+    font: bold 52px Helvetica, Arial, Sans-Serif;
+    text-shadow: 1px 1px #888888, 
+                 2px 2px #888888, 
+                 3px 3px #888888;
+}
+
+#versus-separator {
+    margin-right: 22px;
+    margin-left: 22px;
+}
+
+.user-results, .computer-results {
+    display: flex;
+    justify-content: center;
+}
+
+#user-profile-picture {
+    background-image: url(/images/user.png); /* Designed by vectorstock (Image #45969359 at VectorStock.com)*/
+    background-size: 55%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#computer-profile-picture {
+    background-image: url(/images/computer.png); /* Designed by vectorstock (Image #45969711 at VectorStock.com)*/
+    background-size: 65%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.result {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2px;
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    background: rgb(236, 236, 236);
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+/* Media query for smaller screen sizes */
+@media only screen and (max-width: 600px) {
+    #game-title {
+        font: bold 30px Helvetica, Arial, Sans-Serif;
+    }
+    .option {
+      height: 100px;
+      width: 100px;
+      margin: 6px;
+    }
+}
+
+/* Media query for Samsung Galaxy Fold */
+@media only screen and (max-width: 320px) {
+    #game-title {
+        font: bold 20px Helvetica, Arial, Sans-Serif;
+    }
+    .option {
+        height: 80px;
+        width: 80px;
+        margin: 5px;
+    }
+    .result {
+        width: 40px;
+        height: 50px;
+    }
 }
