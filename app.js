@@ -4,6 +4,27 @@ function getPlayerChoice (){ // Get player's input of Rock, Paper, or Scissor
     return playerSelection; // Return the value for playerSelection to Global Scope
 }
 
+// EDIT Player Selection Below
+
+let playerSelection;
+const userOptionButton = document.querySelectorAll('.option');
+userOptionButton.forEach(function(button) {
+    button.addEventListener('click', function() {
+        if (button.id === 'rock') {
+            playerSelection = 'rock';
+            console.log(playerSelection);
+        } else if (button.id === 'paper') {
+            playerSelection = 'paper';
+            console.log(playerSelection);
+        } else if (button.id === 'scissors') {
+            playerSelection = 'scissors';
+            console.log(playerSelection);
+        }
+    });
+});
+
+// EDIT Player Selection Above
+
 function generateComputerInput() { // Generate computer's input
     const options = ['rock', 'paper', 'scissors']; // Create array that contains the options rock, paper, or scissors
     const randomIndex = Math.floor(Math.random() * options.length); // Declare const that randomly generates/rounds a num based on length of options array.
@@ -64,4 +85,6 @@ function game() {  // Play five rounds, and announce the winner of the game
     }
 }
 
-game(); // execute completed game
+
+//TURN BACK ON AFTER EDITING.
+// game(); // execute completed game
