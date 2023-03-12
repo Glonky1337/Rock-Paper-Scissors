@@ -10,6 +10,7 @@ userOptionButton.forEach(function(button) {
         } else if (button.id === 'scissors') {
             playerSelection = 'scissors';
         }
+        determineRoundWinner(playerSelection, generateComputerInput());
     });
 });
 
@@ -26,27 +27,27 @@ function determineRoundWinner(playerSelection, computerSelection) { // Compare b
     
     if ((playerSelection === 'rock') && (computerSelection === 'scissors')) { // Player wins
         console.log('You win! Rock beats scissors!');
-        playerScore = 1;
+        playerScore++;
     } else if ((playerSelection === 'scissors') && (computerSelection === 'rock')) { // Computer wins
         console.log('You lost! Rock beats scissors!');
-        computerScore = 1
+        computerScore++;
     } else if ((playerSelection === 'scissors') && (computerSelection === 'paper')) { // Player wins
         console.log('You win! Scissors beats paper!');
-        playerScore = 1;
+        playerScore++;
     } else if ((playerSelection === 'paper') && (computerSelection === 'scissors')) { // Computer wins
         console.log('You lost! Scissors beats paper');
-        computerScore = 1;
+        computerScore++;
     } else if ((playerSelection === 'paper') && (computerSelection === 'rock')) { // Player wins
         console.log('You win! Paper beats rock!');
-        playerScore = 1;
+        playerScore++;
     } else if ((playerSelection === 'rock') && (computerSelection === 'paper')) { // Computer wins
         console.log('You lost! Paper beats rock!');
-        computerScore = 1;
+        computerScore++;
     } else if (playerSelection === computerSelection) { // Tied round
         console.log('It\'s a tie! Try again!');
-        playerScore = 1;
-        computerScore = 1;
     }
+    console.log(`playerscore = ${playerScore}`);
+    console.log(`computerscore = ${computerScore}`);
     return {playerScore, computerScore};
 }
 
