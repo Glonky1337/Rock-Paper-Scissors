@@ -1,8 +1,17 @@
-function getPlayerChoice (){ // Get player's input of Rock, Paper, or Scissor
-    let playerSelection = prompt('Rock, Paper, or Scissors?'); // Prompt player to input either Rock, Paper, or Scissor
-    playerSelection = playerSelection.toLowerCase(); // Make player's selection case-insensitive
-    return playerSelection; // Return the value for playerSelection to Global Scope
-}
+let playerSelection;
+
+const userOptionButton = document.querySelectorAll('.option');
+userOptionButton.forEach(function(button) {
+    button.addEventListener('click', function() {
+        if (button.id === 'rock') {
+            playerSelection = 'rock';
+        } else if (button.id === 'paper') {
+            playerSelection = 'paper';
+        } else if (button.id === 'scissors') {
+            playerSelection = 'scissors';
+        }
+    });
+});
 
 function generateComputerInput() { // Generate computer's input
     const options = ['rock', 'paper', 'scissors']; // Create array that contains the options rock, paper, or scissors
