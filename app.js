@@ -16,9 +16,7 @@ userOptionButton.forEach(function(button) {
 
 function generateComputerInput() { // Generate computer's input
     const options = ['rock', 'paper', 'scissors']; // Create array that contains the options rock, paper, or scissors
-    const randomIndex = Math.floor(Math.random() * options.length); // Declare const that randomly generates/rounds a num based on length of options array.
-    let computerSelection = options[randomIndex]; // Select and assign corresponding value from options array
-    return computerSelection; // Return the value for computerSelection to Global Scope
+    return computerSelection = options[Math.floor(Math.random() * options.length)]; // Return the value for computerSelection to Global Scope
 }
 
 function determineRoundWinner(playerSelection, computerSelection) { // Compare both selection parameters, and announce Winner
