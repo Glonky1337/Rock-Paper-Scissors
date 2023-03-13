@@ -20,8 +20,15 @@ userOptionButton.forEach(function(button) {
         console.log(`player total score = ${playerTotalScore}`);
         console.log(`computer total score = ${computerTotalScore}`);
 
-        // if (playerTotalScore )///////////////////
-        console.log(roundsPlayed);
+        if (roundsPlayed === 5) {
+            if (playerTotalScore > computerTotalScore) {
+                console.log('Congratulations, you won!');
+            } else if (playerTotalScore < computerTotalScore) {
+                console.log('Game over - you lose.');
+            } else {
+                console.log('Somehow we\'ve tied!');
+            }
+        }
     });
 });
 
