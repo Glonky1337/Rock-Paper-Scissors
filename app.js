@@ -32,6 +32,13 @@ userOptionButton.forEach(function(button) {
                 resetGame();
             }
         }
+        // Update "vs." score
+        const playerScoreText = document.getElementById('player-score-text');
+        playerScoreText.textContent = playerTotalScore;
+
+        const computerScoreText = document.getElementById('computer-score-text');
+        computerScoreText.textContent = computerTotalScore;
+        
     });
 });
 
@@ -44,6 +51,7 @@ function resetGame () {
 function generateComputerInput() { // Generate computer's input
     const options = ['rock', 'paper', 'scissors']; // Create array that contains the options rock, paper, or scissors
     return computerSelection = options[Math.floor(Math.random() * options.length)]; // Return the value for computerSelection to Global Scope
+    // 
 }
 
 function determineRoundWinner(playerSelection, computerSelection) { // Compare both selection parameters, and announce Winner
