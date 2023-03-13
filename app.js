@@ -23,14 +23,23 @@ userOptionButton.forEach(function(button) {
         if (roundsPlayed === 5) {
             if (playerTotalScore > computerTotalScore) {
                 console.log('Congratulations, you won!');
+                resetGame();
             } else if (playerTotalScore < computerTotalScore) {
                 console.log('Game over - you lose.');
+                resetGame();
             } else {
                 console.log('Somehow we\'ve tied!');
+                resetGame();
             }
         }
     });
 });
+
+function resetGame () {
+    roundsPlayed = 0;
+    playerTotalScore = 0;
+    computerTotalScore = 0;
+}
 
 function generateComputerInput() { // Generate computer's input
     const options = ['rock', 'paper', 'scissors']; // Create array that contains the options rock, paper, or scissors
