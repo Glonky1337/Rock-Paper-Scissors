@@ -1,5 +1,8 @@
 let playerSelection;
 
+playerTotalScore = 0;
+computerTotalScore = 0;
+
 const userOptionButton = document.querySelectorAll('.option');
 userOptionButton.forEach(function(button) {
     button.addEventListener('click', function() {
@@ -10,7 +13,11 @@ userOptionButton.forEach(function(button) {
         } else if (button.id === 'scissors') {
             playerSelection = 'scissors';
         }
-        determineRoundWinner(playerSelection, generateComputerInput());
+        const result = determineRoundWinner(playerSelection, generateComputerInput());
+        playerTotalScore += result.playerScore; // increment winner's score by one for each win
+        computerTotalScore += result.computerScore; // increment winner's score by one for each win
+        console.log(`player total score = ${playerTotalScore}`);
+        console.log(`computer total score = ${computerTotalScore}`);
     });
 });
 
@@ -44,8 +51,8 @@ function determineRoundWinner(playerSelection, computerSelection) { // Compare b
     } else if (playerSelection === computerSelection) { // Tied round
         console.log('It\'s a tie! Try again!');
     }
-    console.log(`playerscore = ${playerScore}`);
-    console.log(`computerscore = ${computerScore}`);
+    // console.log(`playerscore = ${playerScore}`);
+    // console.log(`computerscore = ${computerScore}`);
     return {playerScore, computerScore};
 }
 
