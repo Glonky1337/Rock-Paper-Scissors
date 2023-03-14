@@ -118,6 +118,21 @@
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
+#final-result {
+    display: flex;
+    justify-content: center;
+    width: 324px;
+    height: 60px;
+    align-items: center;
+    margin-bottom: 15px;
+    /* 3d Text */
+    color: white; 
+    font: bold 52px Helvetica, Arial, Sans-Serif;
+    text-shadow: 1px 1px #888888, 
+                 2px 2px #888888, 
+                 3px 3px #888888;
+}
+
 /* Media query for smaller screen sizes */
 @media only screen and (max-width: 600px) {
     #game-title {
