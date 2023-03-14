@@ -20,31 +20,36 @@ userOptionButton.forEach(function(button) {
         console.log(`player total score = ${playerTotalScore}`);
         console.log(`computer total score = ${computerTotalScore}`);
 
-        const roundWinnerAnnouncement = document.getElementById('round-winner-announcement');
-
-        if (roundsPlayed === 5) {
-            if (playerTotalScore > computerTotalScore) {
-                roundWinnerAnnouncement.textContent = 'You won!';
-                resetGame();
-            } else if (playerTotalScore < computerTotalScore) {
-                roundWinnerAnnouncement.textContent = "You lost!";
-                resetGame();
-            } else {
-                roundWinnerAnnouncement.textContent = "It\'s a Tie!"
-                resetGame();
-            }
-        }
         // Update "vs." score
         const playerScoreText = document.getElementById('player-score-text');
         playerScoreText.textContent = playerTotalScore;
-
         const computerScoreText = document.getElementById('computer-score-text');
         computerScoreText.textContent = computerTotalScore;
-        
+
+        const finalResult = document.getElementById('final-result');
+
+        roundsPlayed++;
+
+        if (roundsPlayed === 1) {
+            finalResult.textContent = '';
+        }
+
+        if (roundsPlayed === 5) {
+            if (playerTotalScore > computerTotalScore) {
+                finalResult.textContent = 'You won!'
+                resetGameStats();
+            } else if (playerTotalScore < computerTotalScore) {
+                finalResult.textContent = 'You lose!'
+                resetGameStats();
+            } else {
+                finalResult.textContent = 'It\'s a tie!';
+                resetGameStats();
+            }
+        }
     });
 });
 
-function resetGame () {
+function resetGameStats () {
     roundsPlayed = 0;
     playerTotalScore = 0;
     computerTotalScore = 0;
@@ -63,30 +68,23 @@ function determineRoundWinner(playerSelection, computerSelection) { // Compare b
     if ((playerSelection === 'rock') && (computerSelection === 'scissors')) { // Player wins
         console.log('You win! Rock beats scissors!');
         playerScore++;
-        roundsPlayed++;
     } else if ((playerSelection === 'scissors') && (computerSelection === 'rock')) { // Computer wins
         console.log('You lost! Rock beats scissors!');
         computerScore++;
-        roundsPlayed++;
     } else if ((playerSelection === 'scissors') && (computerSelection === 'paper')) { // Player wins
         console.log('You win! Scissors beats paper!');
         playerScore++;
-        roundsPlayed++;
     } else if ((playerSelection === 'paper') && (computerSelection === 'scissors')) { // Computer wins
         console.log('You lost! Scissors beats paper');
         computerScore++;
-        roundsPlayed++;
     } else if ((playerSelection === 'paper') && (computerSelection === 'rock')) { // Player wins
         console.log('You win! Paper beats rock!');
         playerScore++;
-        roundsPlayed++;
     } else if ((playerSelection === 'rock') && (computerSelection === 'paper')) { // Computer wins
         console.log('You lost! Paper beats rock!');
         computerScore++;
-        roundsPlayed++;
     } else if (playerSelection === computerSelection) { // Tied round
         console.log('It\'s a tie! Try again!');
-        roundsPlayed++;
     }
     return {playerScore, computerScore};
 }
