@@ -20,15 +20,17 @@ userOptionButton.forEach(function(button) {
         console.log(`player total score = ${playerTotalScore}`);
         console.log(`computer total score = ${computerTotalScore}`);
 
+        const roundWinnerAnnouncement = document.getElementById('round-winner-announcement');
+
         if (roundsPlayed === 5) {
             if (playerTotalScore > computerTotalScore) {
-                console.log('Congratulations, you won!');
+                roundWinnerAnnouncement.textContent = 'You won!';
                 resetGame();
             } else if (playerTotalScore < computerTotalScore) {
-                console.log('Game over - you lose.');
+                roundWinnerAnnouncement.textContent = "You lost!";
                 resetGame();
             } else {
-                console.log('Somehow we\'ve tied!');
+                roundWinnerAnnouncement.textContent = "It\'s a Tie!"
                 resetGame();
             }
         }
