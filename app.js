@@ -88,26 +88,3 @@ function determineRoundWinner(playerSelection, computerSelection) { // Compare b
     }
     return {playerScore, computerScore};
 }
-
-function game() {  // Play five rounds, and announce the winner of the game
-    let playerTotalScore = 0; // start each round with score of 0
-    let computerTotalScore = 0; // start each round with score of 0
-
-    for (let i = 0; i < 5; i++) { // loop for five rounds
-        const playerSelection = getPlayerChoice();
-        const computerSelection = generateComputerInput();
-        const result = determineRoundWinner(playerSelection, computerSelection);
-        playerTotalScore += result.playerScore; // increment winner's score by one for each win
-        computerTotalScore += result.computerScore; // increment winner's score by one for each win
-        console.log(`Player Score: ${playerTotalScore}`);
-        console.log(`Computer Score: ${computerTotalScore}`);
-    }
-
-    if (playerTotalScore > computerTotalScore) {
-        console.log('Congratulations, you won!');
-    } else if (playerTotalScore < computerTotalScore) {
-        console.log('Game over - you lose.');
-    } else {
-        console.log('Somehow we\'ve tied!');
-    }
-}
