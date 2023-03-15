@@ -140,9 +140,9 @@
         font: bold 30px Helvetica, Arial, Sans-Serif;
     }
     .option {
-      height: 90px;
-      width: 90px;
-      margin: 4px;
+      height: 100px;
+      width: 100px;
+      margin: 6px;
     }
 }
 
