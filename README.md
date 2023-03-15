@@ -1,4 +1,4 @@
-# rock-paper-scissors
+# Rock Paper Scissors
 
 Live: https://glonky1337.github.io/rock-paper-scissors/index.html
 
