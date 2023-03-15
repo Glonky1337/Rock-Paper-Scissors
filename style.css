@@ -154,12 +154,12 @@
         font: bold 20px Helvetica, Arial, Sans-Serif;
     }
     .option {
-        height: 80px;
-        width: 80px;
-        margin: 5px;
+        height: 75px;
+        width: 75px;
+        margin: 4px;
     }
     .result {
-        width: 40px;
-        height: 50px;
+        width: 35px;
+        height: 45px;
     }
 }
