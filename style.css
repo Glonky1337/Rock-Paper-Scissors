@@ -1,5 +1,8 @@
 * {
     margin: 0px;
+    background-image: url(./images/color-gradient-background.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 #main {
@@ -9,9 +12,6 @@
     align-items: center;
     width: 100%;
     height: 100vh;
-    background-image: url(./images/color-gradient-background.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
 .header {
