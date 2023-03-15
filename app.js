@@ -10,62 +10,62 @@ function determineRoundWinner(playerSelection, computerSelection) { // Compare b
     
     if ((playerSelection === 'rock') && (computerSelection === 'scissors')) { // Player wins
         console.log('You win! Rock beats scissors!');
-        userResultImage = "url('/images/rock.png')";
-        computerResultImage = "url('/images/scissors.png')";
+        userResultImage = "url('./images/rock.png')";
+        computerResultImage = "url('./images/scissors.png')";
         userResultColor = "#6cf96e";
         computerResultColor = "#f96c6c";
         playerScore++;
     } else if ((playerSelection === 'scissors') && (computerSelection === 'rock')) { // Computer wins
         console.log('You lost! Rock beats scissors!');
-        userResultImage = "url('/images/scissors.png')";
-        computerResultImage = "url('/images/rock.png')";
+        userResultImage = "url('./images/scissors.png')";
+        computerResultImage = "url('./images/rock.png')";
         userResultColor = "#f96c6c";
         computerResultColor = "#6cf96e";
         computerScore++;
     } else if ((playerSelection === 'scissors') && (computerSelection === 'paper')) { // Player wins
         console.log('You win! Scissors beats paper!');
-        userResultImage = "url('/images/scissors.png')";
-        computerResultImage = "url('/images/paper.png')";
+        userResultImage = "url('./images/scissors.png')";
+        computerResultImage = "url('./images/paper.png')";
         userResultColor = "#6cf96e";
         computerResultColor = "#f96c6c";
         playerScore++;
     } else if ((playerSelection === 'paper') && (computerSelection === 'scissors')) { // Computer wins
         console.log('You lost! Scissors beats paper');
-        userResultImage = "url('/images/paper.png')";
-        computerResultImage = "url('/images/scissors.png')";
+        userResultImage = "url('./images/paper.png')";
+        computerResultImage = "url('./images/scissors.png')";
         userResultColor = "#f96c6c";
         computerResultColor = "#6cf96e";
         computerScore++;
     } else if ((playerSelection === 'paper') && (computerSelection === 'rock')) { // Player wins
         console.log('You win! Paper beats rock!');
-        userResultImage = "url('/images/paper.png')";
-        computerResultImage = "url('/images/rock.png')";
+        userResultImage = "url('./images/paper.png')";
+        computerResultImage = "url('./images/rock.png')";
         userResultColor = "#6cf96e";
         computerResultColor = "#f96c6c";
         playerScore++;
     } else if ((playerSelection === 'rock') && (computerSelection === 'paper')) { // Computer wins
         console.log('You lost! Paper beats rock!');
-        userResultImage = "url('/images/rock.png')";
-        computerResultImage = "url('/images/paper.png')";
+        userResultImage = "url('./images/rock.png')";
+        computerResultImage = "url('./images/paper.png')";
         userResultColor = "#f96c6c";
         computerResultColor = "#6cf96e";
         computerScore++;
     } else if ((playerSelection === 'rock') && (computerSelection === 'rock')) {
         console.log('It\'s a tie!');
-        userResultImage = "url('/images/rock.png')";
-        computerResultImage = "url('/images/rock.png')";
+        userResultImage = "url('./images/rock.png')";
+        computerResultImage = "url('./images/rock.png')";
         userResultColor = "#f7f96c";
         computerResultColor = "#f7f96c";
     } else if ((playerSelection === 'paper') && (computerSelection === 'paper')) {
         console.log('It\'s a tie!');
-        userResultImage = "url('/images/paper.png')";
-        computerResultImage = "url('/images/paper.png')";
+        userResultImage = "url('./images/paper.png')";
+        computerResultImage = "url('./images/paper.png')";
         userResultColor = "#f7f96c";
         computerResultColor = "#f7f96c";
     } else if ((playerSelection === 'scissors') && (computerSelection === 'scissors')) {
         console.log('It\'s a tie!');
-        userResultImage = "url('/images/scissors.png')";
-        computerResultImage = "url('/images/scissors.png')";
+        userResultImage = "url('./images/scissors.png')";
+        computerResultImage = "url('./images/scissors.png')";
         userResultColor = "#f7f96c";
         computerResultColor = "#f7f96c";
     }
