@@ -4,6 +4,8 @@ Live: https://glonky1337.github.io/rock-paper-scissors/index.html
 
 Rock paper scissors game where you play against the computer.
 
+![website-preview](./images/rock-paper-scissors-screenshot.png)
+
 ## What I learned
 
 ### HTML:
